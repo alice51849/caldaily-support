@@ -1,0 +1,17 @@
+# CalDaily: Calculator & Themes support
+
+> Official support, help and privacy pages for CalDaily: Calculator & Themes, an iOS app by Lumi Studio.
+
+- App Store: https://apps.apple.com/app/id6794178671
+- Platform: iOS
+- App Store category: Utilities
+- Developer: Lumi Studio
+
+## Pages
+
+- [Home](https://open.cait518.cc/caldaily-support/)
+- [Help, FAQ and troubleshooting](https://open.cait518.cc/caldaily-support/help.html)
+- [Support and contact](https://open.cait518.cc/caldaily-support/support.html)
+- [Privacy policy](https://open.cait518.cc/caldaily-support/privacy.html)
+
+<!-- ls-llms: managed by support_network/gen_support_crosspromo.py -->
