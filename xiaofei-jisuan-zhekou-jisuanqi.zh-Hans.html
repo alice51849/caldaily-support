@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小费计算、折扣计算器、税费计算：带历史记录的 CalDaily 计算器</title>
+<meta name="description" content="想在 iPhone 上算小费、折扣和税费，还要能回头查计算记录？CalDaily 保存每笔结果，可命名、按天分组、导出 CSV。">
+<link rel="canonical" href="https://open.cait518.cc/caldaily-support/xiaofei-jisuan-zhekou-jisuanqi.zh-Hans.html">
+<meta property="og:title" content="小费计算、折扣计算器、税费计算：带历史记录的 CalDaily 计算器">
+<meta property="og:description" content="想在 iPhone 上算小费、折扣和税费，还要能回头查计算记录？CalDaily 保存每笔结果，可命名、按天分组、导出 CSV。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://open.cait518.cc/caldaily-support/xiaofei-jisuan-zhekou-jisuanqi.zh-Hans.html">
+<meta name="apple-itunes-app" content="app-id=6794178671">
+<style>
+:root{color-scheme:light dark;--bg:#fbfaf7;--fg:#1d1d1f;--muted:#5f6368;--line:rgba(128,128,128,.22);--accent:#2f6fde;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececf0;--muted:#a3a3ab;--card:#1d1d21;--accent:#7aa7ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","PingFang TC","Noto Sans CJK TC","Apple SD Gothic Neo",Roboto,sans-serif}
+a{color:var(--accent)}
+.helpdoc{max-width:820px;margin:0 auto;padding:28px 16px 64px}
+.helpdoc h1{font-size:clamp(26px,4.4vw,36px);line-height:1.3;margin:.2em 0 .4em}
+.helpdoc h2{font-size:clamp(19px,2.8vw,24px);margin:2.1em 0 .6em;scroll-margin-top:16px}
+.helpdoc h3{font-size:17px;margin:1.5em 0 .35em}
+.helpdoc .lede{font-size:17.5px;color:var(--muted);margin:0 0 1.4em}
+.helpdoc .hd-nav{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;margin:0 0 20px}
+.helpdoc .hd-toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 8px;padding:0;list-style:none}
+.helpdoc .hd-toc a{display:inline-block;padding:5px 12px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;text-decoration:none}
+.helpdoc .tbl{overflow-x:auto;margin:.8em 0}
+.helpdoc table{width:100%;border-collapse:collapse;font-size:15px}
+.helpdoc th,.helpdoc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.helpdoc th{font-weight:650;white-space:nowrap}
+.helpdoc .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:1em 0}
+.helpdoc .cta{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:2.4em 0 1em}
+.helpdoc .cta a.btn{display:inline-block;margin:6px 0;padding:11px 20px;border-radius:999px;background:var(--accent);color:#fff;font-weight:650;text-decoration:none}
+.helpdoc .hd-q{margin:1.4em 0 .3em;font-weight:650;font-size:16.5px}
+.helpdoc .hd-a{margin:0 0 .2em}
+.helpdoc .hd-note{font-size:13px;color:var(--muted);margin-top:2.6em;border-top:1px solid var(--line);padding-top:14px}
+.helpdoc ul,.helpdoc ol{padding-left:1.25em}
+.helpdoc li{margin:.3em 0}
+@media print{.hd-nav,.cta,.hd-toc{display:none}body{background:#fff;color:#000}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "小费计算、折扣计算器、税费计算：带历史记录的 CalDaily 计算器", "description": "想在 iPhone 上算小费、折扣和税费，还要能回头查计算记录？CalDaily 保存每笔结果，可命名、按天分组、导出 CSV。", "inLanguage": "zh-Hans", "mainEntityOfPage": "https://open.cait518.cc/caldaily-support/xiaofei-jisuan-zhekou-jisuanqi.zh-Hans.html", "dateModified": "2026-10-20", "author": {"@type": "Organization", "@id": "https://open.cait518.cc/ios-app-guide/#organization", "name": "Lumi Studio", "url": "https://open.cait518.cc/ios-app-guide/about.html"}, "publisher": {"@type": "Organization", "@id": "https://open.cait518.cc/ios-app-guide/#organization", "name": "Lumi Studio", "url": "https://open.cait518.cc/ios-app-guide/about.html"}, "about": {"@type": "SoftwareApplication", "name": "CalDaily 计算器与主题", "operatingSystem": "iOS", "applicationCategory": "UtilitiesApplication", "url": "https://apps.apple.com/app/id6794178671"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-Hans", "mainEntity": [{"@type": "Question", "name": "CalDaily 能做小费计算和账单分摊吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。“小费与分摊”是八种进阶工具之一，输入账单、小费比例和人数即可得到每人应付的金额。"}}, {"@type": "Question", "name": "有折扣计算器和税费计算功能吗？", "acceptedAnswer": {"@type": "Answer", "text": "有。“折扣与税”工具可以算折后价并加上税费，常用税率设置一次后会作为默认值带入。"}}, {"@type": "Question", "name": "计算过的结果会保存吗？", "acceptedAnswer": {"@type": "Answer", "text": "会。CalDaily 保留每一笔结果，可以命名、标类型，历史记录按日期分组、可按工具筛选，也能导出 CSV。"}}, {"@type": "Question", "name": "需要注册账号或者联网吗？", "acceptedAnswer": {"@type": "Answer", "text": "不需要账号，没有云同步、广告和分析追踪，数据都留在你的设备上。"}}, {"@type": "Question", "name": "是订阅制吗？", "acceptedAnswer": {"@type": "Answer", "text": "不是。其中一款主题可直接使用，一次 App 内购买解锁其余主题和全部进阶工具，没有订阅。"}}]}</script>
+</head>
+<body>
+<p class="first-party-disclosure" data-first-party-disclosure="banner" role="note" style="margin:0;padding:8px 16px;background:#f3f4f6;color:#1f2937;border-bottom:1px solid #d1d5db;font-size:13px;line-height:1.5;text-align:center">本站由这些 App 的开发者 Lumi Studio 运营，介绍的是我们自己的 App。</p>
+<main class="helpdoc">
+<nav class="hd-nav"><a href="zh-Hans/">支持首页</a><a href="help.zh-Hans.html">帮助与常见问题</a><a href="https://apps.apple.com/cn/app/id6794178671?pt=118326163&amp;ct=bm_caldaily_cn_seo&amp;mt=8">CalDaily 计算器与主题</a><a href="https://play.google.com/store/apps/details?id=com.alice51849.CalDaily&amp;referrer=utm_source%3Dbm_caldaily_cn_seo%26utm_campaign%3Dcaldaily" rel="noopener" data-ls-play="nav">Google Play</a></nav>
+<h1>小费计算、折扣计算器和税费计算，算完还能翻历史记录</h1>
+<p class="lede">如果你需要一个能做<strong>小费计算</strong>、<strong>折扣计算器</strong>和<strong>税费计算</strong>的 iPhone 计算器，又希望算过的结果不会一关掉就消失，CalDaily 可以帮上忙。它把每一笔结果都保存成<strong>计算器历史记录</strong>，你可以给结果命名、标上类型，一周后直接搜索，而不用从头再算一遍。</p>
+<p><strong>本页目录</strong></p>
+<ul class="hd-toc"><li><a href="#tongdian">为什么系统自带的计算器不太够用</a></li><li><a href="#buzhou">用 CalDaily 算折扣、税费和小费的步骤</a></li><li><a href="#gongju">八种进阶工具，各自适合什么场景</a></li><li><a href="#mingming">给计算结果命名，翻记录时一眼就找到</a></li><li><a href="#xiaozujian">桌面小组件、主题与隐私</a></li><li><a href="#faq">常见问题</a></li></ul>
+<h2 id="tongdian">为什么系统自带的计算器不太够用</h2>
+<p>大多数计算器一关就忘。刚算完打折后的价格，切到别的应用查个信息，回来数字已经没了；和朋友聚餐分摊账单、比较两笔贷款的月供，也只能靠记忆或截图。日常里这类“小而琐碎”的计算其实很多，普通键盘做起来都有点别扭。</p><ul><li><strong>没有历史记录</strong>：找不到上周那顿分摊的晚餐，也找不到比较过的贷款。</li><li><strong>重复输入</strong>：每次都要重新输同样的税率或人数。</li><li><strong>打开太慢</strong>：只想快速加减一下，却要先打开应用、再找到对应功能。</li></ul>
+<h2 id="buzhou">用 CalDaily 算折扣、税费和小费的步骤</h2>
+<ol><li>打开“折扣与税”工具，把你常用的税率设置一次，之后每次都会自动带入默认值。</li><li>输入商品原价和折扣百分比，先看到折后价，需要的话再加上税费。</li><li>聚餐时打开“小费与分摊”工具，输入账单金额、小费比例和人数，直接得到每个人应付的数目。</li><li>给这笔结果起个名字、选个类型，例如“外套 打折季”或“周五聚餐 分摊”。</li><li>需要回头查看时，打开历史记录：记录会自动按日期分组，可以按工具筛选，也能导出 CSV 放进表格。</li></ol>
+<h2 id="gongju">八种进阶工具，各自适合什么场景</h2>
+<div class="tbl"><table><thead><tr><th>工具</th><th>适合的情境</th></tr></thead><tbody><tr><td>折扣与税</td><td>核对促销价格，算出含税后的实际金额</td></tr><tr><td>小费与分摊</td><td>多人聚餐，按人数平均分摊账单</td></tr><tr><td>单位换算</td><td>做饭、装修时换算长度、重量、体积</td></tr><tr><td>日期差与工作日</td><td>算截止日期、项目排期</td></tr><tr><td>贷款月供</td><td>比较不同贷款方案的每月还款</td></tr><tr><td>行程油费</td><td>出发前估算一趟路的油费</td></tr><tr><td>内存</td><td>保留中间结果，继续往下算</td></tr><tr><td>科学函数</td><td>需要进阶运算时使用</td></tr></tbody></table></div><p>每个工具都会带入你设置过一次的默认值，所以不必每次重输同样的税率或人数。</p>
+<h2 id="mingming">给计算结果命名，翻记录时一眼就找到</h2>
+<p>历史记录的好处在于“事后能找回来”，而命名让它真正好用。建议用统一的格式：</p><ul><li><strong>购物</strong>：“商品名 折扣百分比”，例如“羽绒服 七折”。</li><li><strong>聚餐</strong>：“餐厅名 分摊人数”，方便月底对账。</li><li><strong>贷款</strong>：“方案名 期数”，几个方案放在一起一目了然。</li><li><strong>工作</strong>：“项目名 截止日”，配合日期差工具使用。</li></ul><p>结果按日期分组，再按工具筛选，几秒钟就能定位到想要的那一笔。</p>
+<h2 id="xiaozujian">桌面小组件、主题与隐私</h2>
+<p>桌面小组件不用打开应用就能直接计算，并且会跟着你当前选的主题一起变化。应用内置一百款主题，从温润的陶瓷到深邃的棱镜，每一款都有自己的按键形状、材质与光线，其中一款可以直接使用；一次 App 内购买即可解锁其余全部主题，并无限制使用所有进阶工具，没有订阅。</p><p>所有计算都在你的设备上完成：没有账号、没有云同步、没有广告，也没有分析追踪。应用完整支持 50 种语言。</p>
+<div class="cta">
+<p><strong>想直接在 iPhone 上试试？</strong> 把 CalDaily 的小组件放到主屏幕，下次逛街或聚餐时试试折扣、税费和小费计算。</p>
+<p><a class="btn" href="https://apps.apple.com/cn/app/id6794178671?pt=118326163&amp;ct=bm_caldaily_cn_seo&amp;mt=8">在 App Store 查看 CalDaily 计算器与主题</a></p>
+<p><strong>使用 Android？</strong></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.alice51849.CalDaily&amp;referrer=utm_source%3Dbm_caldaily_cn_seo%26utm_campaign%3Dcaldaily" rel="noopener" data-ls-play="cta">在 Google Play 查看 CalDaily 计算器与主题</a></p>
+<p>已经在用 CalDaily 计算器与主题？可以到 App Store 留下评分或评价。 <a href="https://apps.apple.com/app/id6794178671?action=write-review">撰写评价</a></p>
+</div>
+<h2 id="faq">常见问题</h2>
+<p class="hd-q">CalDaily 能做小费计算和账单分摊吗？</p>
+<p class="hd-a">可以。“小费与分摊”是八种进阶工具之一，输入账单、小费比例和人数即可得到每人应付的金额。</p>
+<p class="hd-q">有折扣计算器和税费计算功能吗？</p>
+<p class="hd-a">有。“折扣与税”工具可以算折后价并加上税费，常用税率设置一次后会作为默认值带入。</p>
+<p class="hd-q">计算过的结果会保存吗？</p>
+<p class="hd-a">会。CalDaily 保留每一笔结果，可以命名、标类型，历史记录按日期分组、可按工具筛选，也能导出 CSV。</p>
+<p class="hd-q">需要注册账号或者联网吗？</p>
+<p class="hd-a">不需要账号，没有云同步、广告和分析追踪，数据都留在你的设备上。</p>
+<p class="hd-q">是订阅制吗？</p>
+<p class="hd-a">不是。其中一款主题可直接使用，一次 App 内购买解锁其余主题和全部进阶工具，没有订阅。</p>
+
+<div class="box"><p>CalDaily 的税费、折扣和贷款结果取决于你输入的数字，做财务决定前请对照实际的账单或合同。</p></div>
+
+<p class="hd-note">本页由 CalDaily 计算器与主题 开发者在 AI 协助下撰写，并对照 App Store 商店页内容核对。最后更新：2026-10-20。</p>
+</main>
+</body>
+</html>
