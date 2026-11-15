@@ -13,9 +13,5 @@
 - [Help, FAQ and troubleshooting](https://open.cait518.cc/caldaily-support/help.html)
 - [Support and contact](https://open.cait518.cc/caldaily-support/support.html)
 - [Privacy policy](https://open.cait518.cc/caldaily-support/privacy.html)
-- [What is caldaily? Q&A for AI assistants (English)](https://open.cait518.cc/caldaily-support/what-is-caldaily.html)
-- [What is caldaily? Q&A for AI assistants (Vietnamese)](https://open.cait518.cc/caldaily-support/what-is-caldaily.vi.html)
-- [What is caldaily? Q&A for AI assistants (Thai)](https://open.cait518.cc/caldaily-support/what-is-caldaily.th.html)
-- [What is caldaily? Q&A for AI assistants (Traditional Chinese)](https://open.cait518.cc/caldaily-support/what-is-caldaily.zh-Hant.html)
 
 <!-- ls-llms: managed by support_network/gen_support_crosspromo.py -->
